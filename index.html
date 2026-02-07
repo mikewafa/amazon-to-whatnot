@@ -24,7 +24,6 @@
             padding: 0 20px;
         }
         
-        /* Header */
         header {
             padding: 60px 0 80px;
             text-align: center;
@@ -95,7 +94,6 @@
             color: #FFF351;
         }
         
-        /* Features */
         .features {
             background: #fff;
             padding: 80px 0;
@@ -144,7 +142,6 @@
             font-size: 1rem;
         }
         
-        /* Pricing */
         .pricing {
             padding: 80px 0;
             background: #fff;
@@ -159,8 +156,8 @@
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 900px;
+            gap: 30px;
+            max-width: 1100px;
             margin: 0 auto;
         }
         
@@ -218,11 +215,6 @@
             margin-right: 10px;
         }
         
-        .pricing-card.featured .pricing-features li:before {
-            color: #FFF351;
-        }
-        
-        /* Footer */
         footer {
             background: #000;
             color: #FFF351;
@@ -240,24 +232,13 @@
             text-decoration: underline;
         }
         
-        /* Responsive */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .btn {
-                width: 100%;
-            }
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .btn { width: 100%; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .pricing-card.featured { transform: scale(1); }
         }
     </style>
 </head>
@@ -336,8 +317,21 @@
                     <a href="https://chrome.google.com/webstore" class="btn btn-secondary">Get Started Free</a>
                 </div>
                 
+                <div class="pricing-card">
+                    <h3>Pro - Monthly</h3>
+                    <div class="price">$19.99<span class="period">/month</span></div>
+                    <ul class="pricing-features">
+                        <li>Unlimited imports</li>
+                        <li>All Pro features</li>
+                        <li>Cancel anytime</li>
+                        <li>Priority support</li>
+                        <li>Flexible billing</li>
+                    </ul>
+                    <a href="https://chrome.google.com/webstore" class="btn btn-secondary">Start Monthly</a>
+                </div>
+                
                 <div class="pricing-card featured">
-                    <h3>Pro - Lifetime</h3>
+                    <h3>Pro - Lifetime 💎</h3>
                     <div class="price">$99<span class="period">/one-time</span></div>
                     <ul class="pricing-features">
                         <li>Unlimited imports</li>
@@ -345,6 +339,7 @@
                         <li>Lifetime access</li>
                         <li>Priority support</li>
                         <li>No monthly fees</li>
+                        <li>Best value!</li>
                     </ul>
                     <a href="https://chrome.google.com/webstore" class="btn btn-primary">Upgrade to Pro</a>
                 </div>
